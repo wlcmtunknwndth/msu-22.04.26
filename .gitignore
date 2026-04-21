@@ -1,0 +1,13 @@
+# Secrets
+.secrets
+
+# venv
+.venv
+
+# python garbage
+*__pycache__*
+
+# Binaries
+*data
+*outputs
+*.pdf

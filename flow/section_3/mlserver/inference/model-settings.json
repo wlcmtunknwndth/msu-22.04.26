@@ -1,0 +1,7 @@
+{
+  "name": "resnet18_cifar10",
+  "implementation": "model.ONNXModel",
+  "parameters": {
+    "uri": "/mnt/models/model.onnx"
+  }
+}

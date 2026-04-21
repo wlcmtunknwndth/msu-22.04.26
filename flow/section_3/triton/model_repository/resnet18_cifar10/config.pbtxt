@@ -1,0 +1,31 @@
+name: "resnet18_cifar10"
+backend: "onnxruntime"
+max_batch_size: 64
+
+input [
+  {
+    name:      "image"
+    data_type: TYPE_FP32
+    dims:      [ 3, 32, 32 ]
+  }
+]
+
+output [
+  {
+    name:      "logits"
+    data_type: TYPE_FP32
+    dims:      [ 10 ]
+  }
+]
+
+dynamic_batching {
+  preferred_batch_size: [ 8, 16, 32 ]
+  max_queue_delay_microseconds: 100
+}
+
+instance_group [
+  {
+    kind:  KIND_CPU
+    count: 1
+  }
+]
