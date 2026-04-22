@@ -13,3 +13,4 @@
 
 # Trash
 /etc
+*.DS_Store
