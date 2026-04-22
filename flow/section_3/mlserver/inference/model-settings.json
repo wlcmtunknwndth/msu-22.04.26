@@ -3,5 +3,8 @@
   "implementation": "model.ONNXModel",
   "parameters": {
     "uri": "/mnt/models/model.onnx"
-  }
+  },
+
+  "inputs": {},
+  "outputs": {} 
 }
